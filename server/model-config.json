@@ -14,7 +14,8 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "db",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "db",
@@ -35,12 +36,12 @@
     "dataSource": "db",
     "public": false
   },
-  "task": {
-    "dataSource": "apiloopback",
+  "Task": {
+    "dataSource": "db",
     "public": true
   },
-  "usuario": {
-    "dataSource": "apiloopback",
+  "Usuario": {
+    "dataSource": "db",
     "public": true
   }
 }

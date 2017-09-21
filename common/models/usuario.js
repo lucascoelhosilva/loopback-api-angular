@@ -15,7 +15,6 @@ module.exports = function(Usuario) {
   // API Novo Usuario
   Usuario.novoUsuario = function(ctx, cb) {
     Usuario.create(ctx.req.body, function(err, usuario) {
-      console.log(usuario);
       if (err) {
         console.error(err);
         return cb(err);
