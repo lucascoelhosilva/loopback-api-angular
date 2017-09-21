@@ -1,0 +1,46 @@
+{
+  "name": "task",
+  "plural": "taks",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "string",
+      "required": true
+    },
+    "reminder": {
+      "type": "boolean"
+    },
+    "completed": {
+      "type": "boolean"
+    },
+    "usuarioId": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "usuario": {
+      "type": "belongsTo",
+      "model": "usuario",
+      "foreignKey": "usuarioId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

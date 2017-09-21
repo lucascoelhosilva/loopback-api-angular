@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "apiloopback": {
+    "host": "localhost",
+    "port": 5432,
+    "url": "",
+    "database": "apiloopback",
+    "password": "apiloopback",
+    "name": "apiloopback",
+    "user": "apiloopback",
+    "connector": "postgresql"
+  }
+}
