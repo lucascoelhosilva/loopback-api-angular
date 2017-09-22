@@ -2,8 +2,4 @@ app.controller('homeController', ['$scope', '$translate', function ($scope, $tra
 
     $scope.home = 'Home';
 
-    $scope.changeLanguage = function (key) {
-      $translate.use(key);
-    };
-
 }]);
