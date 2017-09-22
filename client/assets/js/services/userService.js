@@ -1,30 +1,30 @@
 'use strict';
 
-app.factory('userFactory', function($http, config) {
+app.factory('Usuario', function($http, config) {
 
-    var baseUrl = config.baseUrl+'/api/v1/users';
+    var baseUrl = config.baseUrl+'/api/Usuarios';
 
-    var userFactory = {};
+    var Usuario = {};
 
-    userFactory.find = function () {
+    Usuario.find = function () {
         return $http.get(baseUrl);
     };
 
-    userFactory.findById = function (id) {
+    Usuario.findById = function (id) {
         return $http.get(baseUrl + '/' + id);
     };
 
-    userFactory.insert = function (user) {
+    Usuario.insert = function (user) {
         return $http.post(baseUrl, user);
     };
 
-    userFactory.update = function (user) {
+    Usuario.update = function (user) {
         return $http.put(baseUrl + '/' + user.id, user)
     };
 
-    userFactory.delete = function (id) {
+    Usuario.delete = function (id) {
         return $http.delete(baseUrl + '/' + id);
     };
 
-    return userFactory;
+    return Usuario;
 });

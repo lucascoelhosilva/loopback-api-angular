@@ -1,12 +1,13 @@
-app.controller('userController', ['$scope', 'userFactory', '$location',  function ($scope, userFactory, $location) {
+app.controller('userController', ['$scope', 'Usuario', '$location',  
+    function ($scope, Usuario, $location) {
 
-    $scope.users = null;
+    $scope.user = null;
     $scope.message = null;
 
     var getUsers = function() {
-        userFactory.find()
+        Usuario.find()
             .success(function (data) {
-                $scope.users = data;
+                $scope.user = data;
             })
             .error(function (error) {
                 $scope.message = "Error..."+ error.message;
@@ -15,7 +16,7 @@ app.controller('userController', ['$scope', 'userFactory', '$location',  functio
     };
 
     $scope.save = function(user) {
-        userFactory.insert(user)
+        Usuario.insert(user)
             .success(function (data) {
                 $scope.list();
             })
