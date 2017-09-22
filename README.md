@@ -10,6 +10,7 @@ O projeto também está configurado para trabalhar com o [docker-compose](https:
 
 # Primeira vez
     npm install
+    bower install
 
 # APIs
     API cadastro - http://0.0.0.0:3000/api/Usuarios/novoUsuario 

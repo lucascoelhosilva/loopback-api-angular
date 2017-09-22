@@ -1,6 +1,6 @@
 {
   "name": "Task",
-  "plural": "Taks",
+  "plural": "Tasks",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
